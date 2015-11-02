@@ -8,8 +8,14 @@
 
 #include <iostream>
 
+#include "Edge.hpp"
+#include "Graph.hpp"
+#include "PushRelabel.hpp"
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    freopen("input.txt", "r", stdin);
+    FlowGraph g;
+    std::cin >> g;
+    std::cout << doPushRelabel(&g, 1, g.size()) << "\n";
     return 0;
 }

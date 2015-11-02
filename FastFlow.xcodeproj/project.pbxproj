@@ -8,23 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		50F3F9E31BE7B27F00C75A52 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F3F9E21BE7B27F00C75A52 /* main.cpp */; };
+		50F3F9F31BE8020700C75A52 /* input.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F3F9F21BE801F800C75A52 /* input.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		50F3F9DD1BE7B27F00C75A52 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
 			files = (
+				50F3F9F31BE8020700C75A52 /* input.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50F3F9DF1BE7B27F00C75A52 /* FastFlow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FastFlow; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F3F9E21BE7B27F00C75A52 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		50F3F9EA1BE7B29600C75A52 /* Edge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Edge.hpp; sourceTree = "<group>"; };
+		50F3F9ED1BE7B2F500C75A52 /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
+		50F3F9F01BE7F2A000C75A52 /* PushRelabel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PushRelabel.hpp; sourceTree = "<group>"; };
+		50F3F9F21BE801F800C75A52 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,10 @@
 		50F3F9D61BE7B27F00C75A52 = {
 			isa = PBXGroup;
 			children = (
+				50F3F9F21BE801F800C75A52 /* input.txt */,
+				50F3F9F01BE7F2A000C75A52 /* PushRelabel.hpp */,
+				50F3F9ED1BE7B2F500C75A52 /* Graph.hpp */,
+				50F3F9EA1BE7B29600C75A52 /* Edge.hpp */,
 				50F3F9E11BE7B27F00C75A52 /* FastFlow */,
 				50F3F9E01BE7B27F00C75A52 /* Products */,
 			);
