@@ -25,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		506DF3461BF5C7E700A6B355 /* MalhotraKumarMaheshwari.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MalhotraKumarMaheshwari.hpp; sourceTree = "<group>"; };
 		50F3F9DF1BE7B27F00C75A52 /* FastFlow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FastFlow; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F3F9E21BE7B27F00C75A52 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		50F3F9EA1BE7B29600C75A52 /* Edge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Edge.hpp; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		50F3F9D61BE7B27F00C75A52 = {
 			isa = PBXGroup;
 			children = (
+				506DF3461BF5C7E700A6B355 /* MalhotraKumarMaheshwari.hpp */,
 				50F3F9F21BE801F800C75A52 /* input.txt */,
 				50F3F9F01BE7F2A000C75A52 /* PushRelabel.hpp */,
 				50F3F9ED1BE7B2F500C75A52 /* Graph.hpp */,
@@ -245,6 +247,7 @@
 				50F3F9E81BE7B27F00C75A52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
