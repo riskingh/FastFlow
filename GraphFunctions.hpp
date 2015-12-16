@@ -14,6 +14,8 @@
 #include <queue>
 #include <climits>
 
+#include "Graph.hpp"
+
 typedef int int32;
 typedef unsigned int uint32;
 
