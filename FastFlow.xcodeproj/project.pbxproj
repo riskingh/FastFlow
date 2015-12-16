@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		50F3F9E31BE7B27F00C75A52 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F3F9E21BE7B27F00C75A52 /* main.cpp */; };
 		50F3F9F31BE8020700C75A52 /* input.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 50F3F9F21BE801F800C75A52 /* input.txt */; };
+		50FDFFE81C1AB8BA0080C994 /* Edge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50FDFFC81C1AAB190080C994 /* Edge.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		502651641C21BAE800EE1E71 /* GraphFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphFunctions.cpp; sourceTree = "<group>"; };
+		502651651C21BAE800EE1E71 /* GraphFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GraphFunctions.hpp; sourceTree = "<group>"; };
+		503A3E511C19C14D00FDF788 /* PushRelabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PushRelabel.cpp; sourceTree = "<group>"; };
 		506DF3461BF5C7E700A6B355 /* MalhotraKumarMaheshwari.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MalhotraKumarMaheshwari.hpp; sourceTree = "<group>"; };
 		50F3F9DF1BE7B27F00C75A52 /* FastFlow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FastFlow; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F3F9E21BE7B27F00C75A52 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -32,6 +36,9 @@
 		50F3F9ED1BE7B2F500C75A52 /* Graph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Graph.hpp; sourceTree = "<group>"; };
 		50F3F9F01BE7F2A000C75A52 /* PushRelabel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PushRelabel.hpp; sourceTree = "<group>"; };
 		50F3F9F21BE801F800C75A52 /* input.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		50FDFFC81C1AAB190080C994 /* Edge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Edge.cpp; sourceTree = "<group>"; };
+		50FDFFCC1C1AAD4D0080C994 /* MalhotraKumarMaheshwari.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MalhotraKumarMaheshwari.cpp; sourceTree = "<group>"; };
+		50FDFFCE1C1AAE520080C994 /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,11 +55,17 @@
 		50F3F9D61BE7B27F00C75A52 = {
 			isa = PBXGroup;
 			children = (
-				506DF3461BF5C7E700A6B355 /* MalhotraKumarMaheshwari.hpp */,
-				50F3F9F21BE801F800C75A52 /* input.txt */,
-				50F3F9F01BE7F2A000C75A52 /* PushRelabel.hpp */,
-				50F3F9ED1BE7B2F500C75A52 /* Graph.hpp */,
+				50FDFFC81C1AAB190080C994 /* Edge.cpp */,
 				50F3F9EA1BE7B29600C75A52 /* Edge.hpp */,
+				50F3F9ED1BE7B2F500C75A52 /* Graph.hpp */,
+				50FDFFCE1C1AAE520080C994 /* Graph.cpp */,
+				502651651C21BAE800EE1E71 /* GraphFunctions.hpp */,
+				502651641C21BAE800EE1E71 /* GraphFunctions.cpp */,
+				50F3F9F01BE7F2A000C75A52 /* PushRelabel.hpp */,
+				503A3E511C19C14D00FDF788 /* PushRelabel.cpp */,
+				506DF3461BF5C7E700A6B355 /* MalhotraKumarMaheshwari.hpp */,
+				50FDFFCC1C1AAD4D0080C994 /* MalhotraKumarMaheshwari.cpp */,
+				50F3F9F21BE801F800C75A52 /* input.txt */,
 				50F3F9E11BE7B27F00C75A52 /* FastFlow */,
 				50F3F9E01BE7B27F00C75A52 /* Products */,
 			);
@@ -130,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FDFFE81C1AB8BA0080C994 /* Edge.cpp in Sources */,
 				50F3F9E31BE7B27F00C75A52 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,9 +10,11 @@
 
 #include "Edge.hpp"
 #include "Graph.hpp"
-//#include "PushRelabel.hpp"
+#include "GraphFunctions.hpp"
+#include "PushRelabel.hpp"
 #include "MalhotraKumarMaheshwari.hpp"
 
 int main(int argc, const char * argv[]) {
+//    MalhotraKumarMaheshwari temp(
     return 0;
 }

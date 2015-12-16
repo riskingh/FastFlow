@@ -17,6 +17,7 @@
 
 #include "Edge.hpp"
 #include "Graph.hpp"
+#include "GraphFunctions.hpp"
 
 typedef int int32;
 typedef unsigned int uint32;

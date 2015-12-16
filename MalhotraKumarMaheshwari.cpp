@@ -30,27 +30,7 @@ void MalhotraKumarMaheshwari::deleteVertex(uint32 vertex) {
 }
 
 bool MalhotraKumarMaheshwari::calculateLevels() {
-    level.assign(graph->size() + 1, ULLONG_MAX);
-    level[source] = 0;
-    std::queue<uint32> bfsQueue;
-    bfsQueue.push(source);
-    
-    uint32 vertex, nextVertex;
-    FlowGraph::iterator edgeIterator;
-    while (!bfsQueue.empty()) {
-        vertex = bfsQueue.front();
-        bfsQueue.pop();
-        for (edgeIterator = graph->begin(vertex); edgeIterator != graph->end(vertex); ++edgeIterator) {
-            if (edgeIterator->getResidual() == 0)
-                continue;
-            nextVertex = edgeIterator->getToVertex();
-            if (level[nextVertex] == ULLONG_MAX) {
-                level[nextVertex] = level[vertex] + 1;
-                bfsQueue.push(nextVertex);
-            }
-        }
-    }
-    
+    bfs(graph, source, level, flowEdgeExists);
     return level[sink] != ULLONG_MAX;
 }
 
