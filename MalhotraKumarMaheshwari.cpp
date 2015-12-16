@@ -6,7 +6,7 @@
 //  Copyright © 2015 Maxim Grishkin. All rights reserved.
 //
 
-#include "MalhotraKumarMaheshwari.hpp"
+//#include "MalhotraKumarMaheshwari.hpp"
 
     
 int64 MalhotraKumarMaheshwari::potential(uint32 vertex) {

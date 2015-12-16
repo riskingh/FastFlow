@@ -64,4 +64,6 @@ public:
     int64 getFlow();
 };
 
+#include "MalhotraKumarMaheshwari.cpp"
+
 #endif /* MalhotraKumarMaheshwari_hpp */

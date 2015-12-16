@@ -15,6 +15,10 @@
 #include "MalhotraKumarMaheshwari.hpp"
 
 int main(int argc, const char * argv[]) {
-//    MalhotraKumarMaheshwari temp(
+    freopen("input.txt", "r", stdin);
+    FlowGraph graph;
+    std::cin >> graph;
+    MalhotraKumarMaheshwari temp(&graph, 0, (int)graph.size() - 1);
+    std::cout << "flow: " << temp.getFlow() << "\n";
     return 0;
 }

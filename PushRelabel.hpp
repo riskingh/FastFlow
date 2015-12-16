@@ -47,4 +47,6 @@ public:
     int64 getFlow();
 };
 
+#include "PushRelabel.cpp"
+
 #endif /* PushRelabel_hpp */
