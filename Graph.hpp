@@ -29,23 +29,8 @@ protected:
     std::vector< std::vector< uint32 > > adjacent;
     
 public:
-    Graph() {}
-    
-    friend std::istream &operator >>(std::istream &stream, Graph &graph) {
-        uint32 vertexNumber, edgeNumber;
-        stream >> vertexNumber >> edgeNumber;
-        
-        graph.adjacent.resize(vertexNumber + 1);
-        
-        TEdge edge;
-        for (; edgeNumber > 0; --edgeNumber) {
-            stream >> edge;
-            graph.adjacent[edge.getFromVertex()].push_back((uint32)graph.edges.size());
-            graph.edges.push_back(edge);
-        }
-        
-        return stream;
-    }
+    Graph();
+    friend std::istream &operator >>(std::istream &stream, Graph &graph);
     
     class iterator {
     private:
@@ -53,90 +38,32 @@ public:
         std::vector< uint32 >::iterator edgeNumberIterator;
         
     public:
-        iterator () {}
-        
-        iterator(Graph *graph, std::vector< uint32 >::iterator edgeNumberIterator)
-        : graph(graph), edgeNumberIterator(edgeNumberIterator) {}
-        
-        iterator &operator ++() {
-            ++edgeNumberIterator;
-            return *this;
-        }
-        
-        iterator operator ++(int32) {
-            iterator old(*this);
-            ++edgeNumberIterator;
-            return old;
-        }
-        
-        TEdge &operator *() {
-            return graph->edges[*edgeNumberIterator];
-        }
-        
-        TEdge &oppositeEdge() {
-            return graph->edges[(*edgeNumberIterator) ^ 1];
-        }
-        
-        TEdge *operator ->() {
-            return &graph->edges[*edgeNumberIterator];
-        }
-        
-        bool operator ==(iterator other) {
-            return graph == other.graph && edgeNumberIterator == other.edgeNumberIterator;
-        }
-        
-        bool operator !=(iterator other) {
-            return graph != other.graph || edgeNumberIterator != other.edgeNumberIterator;
-        }
+        iterator ();
+        iterator(Graph *graph, std::vector< uint32 >::iterator edgeNumberIterator);
+        iterator &operator ++();
+        iterator operator ++(int32);
+        TEdge &operator *();
+        TEdge &oppositeEdge();
+        TEdge *operator ->();
+        bool operator ==(iterator other);
+        bool operator !=(iterator other);
     };
     
-    iterator begin(uint32 vertex) {
-        return iterator(this, adjacent[vertex].begin());
-    }
-    
-    iterator end(uint32 vertex) {
-        return iterator(this, adjacent[vertex].end());
-    }
-    
-    uint32 size() {
-        return (int32)adjacent.size() - 1;
-    }
-    
-    uint32 size(uint32 vertex) {
-        return (uint32)adjacent[vertex].size();
-    }
-    
-    TEdge &getEdge(uint32 vertex, uint32 edgeNumber) {
-        return edges[adjacent[vertex][edgeNumber]];
-    }
-
-    TEdge &getOppositeEdge(uint32 vertex, uint32 edgeNumber) {
-        return edges[adjacent[vertex][edgeNumber] ^ 1];
-    }
+    iterator begin(uint32 vertex);
+    iterator end(uint32 vertex);
+    uint32 size();
+    uint32 size(uint32 vertex);
+    TEdge &getEdge(uint32 vertex, uint32 edgeNumber);
+    TEdge &getOppositeEdge(uint32 vertex, uint32 edgeNumber);
 };
 
 
 class FlowGraph: public Graph<FlowEdge> {
 public:
-    FlowGraph() {}
-    
-    friend std::istream &operator >>(std::istream &stream, FlowGraph &graph) {
-        uint32 vertexNumber, edgeNumber;
-        stream >> vertexNumber >> edgeNumber;
-        
-        graph.adjacent.resize(vertexNumber + 1);
-        
-        FlowEdge edge;
-        for (; edgeNumber > 0; --edgeNumber) {
-            stream >> edge;
-            graph.adjacent[edge.getFromVertex()].push_back((uint32)graph.edges.size());
-            graph.edges.push_back(edge);
-            graph.adjacent[edge.getToVertex()].push_back((uint32)graph.edges.size());
-            graph.edges.push_back(edge.reversed());
-        }
-        
-        return stream;
-    }
+    FlowGraph();
+    friend std::istream &operator >>(std::istream &stream, FlowGraph &graph);
 };
+
+#include "Graph.cpp"
 
 #endif /* Graph_hpp */
